@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page login</title>
+  <link href="../dist/output.css" rel="stylesheet" />
+</head>
+
+<body class="bg-cyan">
+  
+    <section>
+
+        <div class="justify-center w-full mx-auto bg-gray-100">
+            <div x-data="{ open: false }" class="flex flex-col w-full px-8 py-2 mx-auto md:px-12 md:items-center md:justify-between md:flex-row lg:px-32 max-w-7xl">
+              <div class="flex flex-row items-center justify-between text-black">
+                <a class="inline-flex items-center gap-3 text-xl font-bold tracking-tight text-black">
+                  <span> ❖ </span>
+                  <span>Windstatic</span>
+                </a>
+                <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                  <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+              <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden gap-3 p-4 px-5 text-sm font-medium text-gray-500 md:px-0 md:pb-0 md:flex md:justify-start md:flex-row lg:p-0 md:mt-0">
+                <a class="hover:text-black focus:outline-none focus:text-gray-500 md:ml-auto" href="./notfound.html">Menu 1
+                </a>
+                <a class="hover:text-black focus:outline-none focus:text-gray-500" href="./notfound.html">Menu 2
+                </a>
+              </nav>
+            </div>
+          </div>
+
+        <div class="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl">
+          <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
+            <div class="p-2 border bg-gray-50 rounded-3xl">
+              <div class="p-10 bg-white border shadow-lg rounded-3xl">
+
+
+                <!-- LOGIN COM O GOOGLE -->
+                <div>
+                  <button class="inline-flex items-center justify-center w-full h-12 gap-3 px-5 py-3 font-medium duration-200 bg-gray-100 rounded-xl hover:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" type="button" aria-label="Sign in with Google">
+                    <ion-icon name="logo-google" role="img" class="md hydrated" aria-label="logo google"></ion-icon>
+                    <span> ❖ </span>
+                    <span>Faça login com Google</span>
+                  </button>
+                  <div class="relative py-3">
+                    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                      <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                      <span class="px-2 text-sm text-black bg-white">OU</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- ----------------------------- -->
+
+
+                <form>
+
+                <!-- INSERIR DADOS LOGIN -->
+                  <div class="space-y-3">
+                    <div>
+                      <label for="name" class="block mb-3 text-sm font-medium text-black">
+                        Nome
+                      </label>
+                      <input type="text" id="name" placeholder="Seu nome" class="block w-full h-12 px-4 py-2 text-blue-500 duration-200 border rounded-lg appearance-none bg-chalk border-zinc-300 placeholder-zinc-300 focus:border-zinc-300 focus:outline-none focus:ring-zinc-300 sm:text-sm">
+                    </div>
+
+                    <div class="col-span-full">
+                      <label for="password" class="block mb-3 text-sm font-medium text-black">
+                        Senha
+                      </label>
+                      <input id="password" class="block w-full h-12 px-4 py-2 text-blue-500 duration-200 border rounded-lg appearance-none bg-chalk border-zinc-300 placeholder-zinc-300 focus:border-zinc-300 focus:outline-none focus:ring-zinc-300 sm:text-sm" placeholder="Digite sua senha" type="password">
+                    </div>
+
+                    <div class="col-span-full">
+                        <a type="submit" class="inline-flex items-center justify-center w-full h-12 gap-3 px-5 py-3 font-medium text-white ml-auto hover:text-black duration-200 bg-tahiti rounded-xl hover:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" href="./index.html">
+                        Conectar
+                    </a>
+                    </div>
+                </div>
+                <!-- ----------------------------- -->
+
+
+                <!-- ESQUECEU A SENHA -->
+                  <div class="mt-6">
+                    <p class="flex mx-auto text-sm font-medium leading-tight text-center text-black">
+                      Esqueceu sua senha?
+                      <a class="ml-auto text-blue hover:text-black" href="./notfound.html">
+                        Clique aqui
+                      </a>
+                    </p>
+                  </div>
+                <!-- ----------------------------- -->
+
+                </form>
+
+                <!-- TEXTOS DE APRESENTAÇÃO -->
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <h1 class="text-4xl font-semibold tracking-tighter text-tahiti lg:text-5xl">
+                Primeiro teste modelo utilizando TAILWIND,
+                <span class="text-gray-600">SENAI</span>
+              </h1>
+              <p class="mt-4 text-base font-medium text-gray-500 text-pretty">
+                Configurações e breve exemplo de aplicações.
+              </p>
+            </div>
+          </div>
+        </div>
+                <!-- ----------------------------- -->
+        
+                
+        <!-- FOOTER PAGE -->
+        <footer>
+            <div class="px-8 py-20 mx-auto md:px-12 lg:px-32 max-w-7xl">
+              <div class="flex flex-col items-baseline space-y-6">
+                <div class="mx-auto">
+                  <a href="/" class="mx-auto text-lg text-center">
+                    ❖
+                  </a>
+                </div>
+                <div class="mx-auto" x-data="{ year: new Date().getFullYear() }">
+                  <span class="mx-auto mt-2 text-sm font-medium text-gray-500">
+                    Copyright © <span x-text="year">2024</span>
+                    <a aria-label="Michael Andreuzza" href="#_" class="mx-2 text-blue-500 hover:text-gray-500">Matheus H. S. Vieira</a>
+                    Since 2024
+                  </span>
+                </div>
+              </div>
+            </div>
+          </footer>
+        <!-- ----------------------------- -->
+
+
+      </section>
+    
+</body>
+</html>
